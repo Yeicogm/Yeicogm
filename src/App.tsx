@@ -26,8 +26,7 @@ const cards = [
     title: "STROMROL.ES",
     tags: ["React", "Tailwind CSS", "Generador dinámico"],
     url: "https://stromrol.es/",
-    description:
-      "Generador de fichas de rol y recursos de juego con estilo dinámico",
+    description: "Generador de fichas de rol y recursos de juego con estilo dinámico",
   },
   {
     title: "RESUMIDOR WEB",
@@ -68,18 +67,16 @@ const cards = [
 
 function ZxLoading({ onComplete }: { onComplete: () => void }) {
   const [started, setStarted] = useState(false);
-  const [phase, setPhase] = useState<
-    "start" | "pilot" | "pilot-short" | "data" | "pause" | "data-end"
-  >("start");
+  const [phase, setPhase] = useState<"start" | "pilot" | "pilot-short" | "data" | "pause" | "data-end">(
+    "start",
+  );
   const [lines, setLines] = useState<string[]>([]);
 
   const startLoading = () => {
     setStarted(true);
 
     const AudioContextConstructor: typeof AudioContext | undefined =
-      window.AudioContext ??
-      (window as { webkitAudioContext?: typeof AudioContext })
-        .webkitAudioContext;
+      window.AudioContext ?? (window as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
 
     if (!AudioContextConstructor) {
       onComplete();
@@ -104,10 +101,7 @@ function ZxLoading({ onComplete }: { onComplete: () => void }) {
       if (enabled) {
         noiseInterval = window.setInterval(() => {
           if (ctx.state === "running") {
-            osc.frequency.setValueAtTime(
-              Math.random() * 2000 + 1000,
-              ctx.currentTime,
-            );
+            osc.frequency.setValueAtTime(Math.random() * 2000 + 1000, ctx.currentTime);
           }
         }, 1);
       }
@@ -181,10 +175,8 @@ function ZxLoading({ onComplete }: { onComplete: () => void }) {
   }
 
   let bgClass = "bg-black";
-  if (phase === "pilot" || phase === "pilot-short")
-    bgClass = "zx-loading-pilot";
-  else if (phase === "data" || phase === "data-end")
-    bgClass = "zx-loading-data";
+  if (phase === "pilot" || phase === "pilot-short") bgClass = "zx-loading-pilot";
+  else if (phase === "data" || phase === "data-end") bgClass = "zx-loading-data";
 
   return (
     <div
@@ -213,9 +205,7 @@ function ZxLoading({ onComplete }: { onComplete: () => void }) {
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [previewCard, setPreviewCard] = useState<(typeof cards)[number] | null>(
-    null,
-  );
+  const [previewCard, setPreviewCard] = useState<(typeof cards)[number] | null>(null);
 
   return (
     <>
@@ -265,10 +255,7 @@ function App() {
                 key={card.title}
                 onClick={() => card.url && setPreviewCard(card)}
                 onKeyDown={(event) => {
-                  if (
-                    card.url &&
-                    (event.key === "Enter" || event.key === " ")
-                  ) {
+                  if (card.url && (event.key === "Enter" || event.key === " ")) {
                     setPreviewCard(card);
                   }
                 }}
@@ -278,9 +265,7 @@ function App() {
               >
                 <div className="flex flex-col gap-4 sm:items-start sm:justify-between sm:flex-row">
                   <div className="flex items-center gap-4 min-w-0">
-                    <span className="text-[#00ff00] sm:text-xl font-bold animate-pulse-slow">
-                      {"\u25A0"}
-                    </span>
+                    <span className="text-[#00ff00] sm:text-xl font-bold animate-pulse-slow">{"\u25A0"}</span>
                     <h2 className="text-xl sm:text-2xl font-bold text-white zx-text-yellow group-hover:text-black group-hover:drop-shadow-none truncate">
                       {card.title}
                     </h2>
@@ -311,9 +296,7 @@ function App() {
                     <p className="text-xs uppercase tracking-[0.35em] text-[#00ff00] font-semibold">
                       Vista previa
                     </p>
-                    <h3 className="mt-2 text-2xl font-bold text-white">
-                      {previewCard.title}
-                    </h3>
+                    <h3 className="mt-2 text-2xl font-bold text-white">{previewCard.title}</h3>
                   </div>
                   <button
                     type="button"
@@ -327,13 +310,7 @@ function App() {
                 <div className="relative h-[75vh] w-full bg-[#05070f]">
                   <button
                     type="button"
-                    onClick={() =>
-                      window.open(
-                        previewCard.url,
-                        "_blank",
-                        "noopener,noreferrer",
-                      )
-                    }
+                    onClick={() => window.open(previewCard.url, "_blank", "noopener,noreferrer")}
                     aria-label="Abrir proyecto en nueva pestaña"
                     className="absolute inset-0 z-10 cursor-pointer bg-transparent"
                   />
@@ -349,9 +326,7 @@ function App() {
                 </div>
 
                 <div className="px-6 py-5">
-                  <p className="text-sm leading-6 text-[#d7d7d7]">
-                    {previewCard.description}
-                  </p>
+                  <p className="text-sm leading-6 text-[#d7d7d7]">{previewCard.description}</p>
                 </div>
               </div>
             </div>
