@@ -15,3 +15,5 @@
 - `GORILAS BAS` — homenaje a Gorillas.bas en JavaScript
 - `ARKANOID CLONE` — clon de Arkanoid en JavaScript con niveles y físicas de rebote
 - `LABERINTO` — juego de laberinto en JavaScript y Canvas para encontrar la salida
+- `RESUMIDOR WEB` — herramienta web para resumir textos automáticamente y obtener versiones condensadas en segundos
+- `DIVISOR` — juego de corte de formas en JavaScript y Canvas: dividí la figura en partes iguales para conseguir todas las estrellas antes de que se acabe el tiempo
