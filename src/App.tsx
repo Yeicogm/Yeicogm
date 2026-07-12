@@ -57,6 +57,13 @@ const cards = [
     description:
       "Juego de laberinto en JavaScript y Canvas: genera mapas, recorre pasillos y encuentra la salida en el menor tiempo posible.",
   },
+  {
+    title: "DIVISOR",
+    tags: ["JavaScript", "Canvas", "Juego"],
+    url: "https://divisorcut.netlify.app/",
+    description:
+      "Juego de corte de formas en JavaScript y Canvas: dividí la figura en partes iguales para conseguir todas las estrellas antes de que se acabe el tiempo.",
+  },
 ];
 
 function ZxLoading({ onComplete }: { onComplete: () => void }) {
