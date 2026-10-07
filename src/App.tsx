@@ -68,7 +68,7 @@ const cards = [
     tags: ["React", "CesiumJS", "Mapa 3D", "Tiempo real"],
     url: "https://estacionspy.netlify.app/",
     description:
-      "Tracker en vivo de la Estación Espacial Internacional: sigue su posición sobre un globo 3D y consulta los próximos pases visibles desde tu ubicación.",
+      "Tracker en vivo de la Estación Espacial Internacional:sigue su posición sobre un globo 3D y consulta los próximos pases visibles desde tu ubicación.",
   },
 ];
 
