@@ -20,3 +20,5 @@
   segundos
 - `DIVISOR` — juego de corte de formas en JavaScript y Canvas: dividí la figura en partes iguales para
   conseguir todas las estrellas antes de que se acabe el tiempo
+- `ISSSPY` — tracker en vivo de la Estación Espacial Internacional: sigue su posición sobre un globo 3D y
+  consulta los próximos pases visibles desde tu ubicación

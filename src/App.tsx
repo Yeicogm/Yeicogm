@@ -63,6 +63,13 @@ const cards = [
     description:
       "Juego de corte de formas en JavaScript y Canvas: dividí la figura en partes iguales para conseguir todas las estrellas antes de que se acabe el tiempo.",
   },
+  {
+    title: "ISSSPY",
+    tags: ["React", "CesiumJS", "Mapa 3D", "Tiempo real"],
+    url: "https://estacionspy.netlify.app/",
+    description:
+      "Tracker en vivo de la Estación Espacial Internacional: sigue su posición sobre un globo 3D y consulta los próximos pases visibles desde tu ubicación.",
+  },
 ];
 
 function ZxLoading({ onComplete }: { onComplete: () => void }) {
